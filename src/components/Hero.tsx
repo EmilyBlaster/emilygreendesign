@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-type ShapeStyle = "diagonal" | "rectangular" | "mixed";
+type HeroStyle = "diagonal" | "rectangular" | "mixed" | "gradient";
 
 const DiagonalShapes = () => (
   <>
@@ -84,27 +84,52 @@ const MixedShapes = () => (
   </>
 );
 
-const shapeComponents: Record<ShapeStyle, React.FC> = {
+const GradientBackground = () => (
+  <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      className="absolute inset-0"
+      style={{
+        background: "radial-gradient(ellipse at 0% 0%, hsl(var(--primary) / 0.15) 0%, transparent 50%), radial-gradient(ellipse at 100% 20%, hsl(var(--accent) / 0.12) 0%, transparent 45%), radial-gradient(ellipse at 30% 100%, hsl(var(--secondary) / 0.1) 0%, transparent 50%)",
+      }}
+    />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.6 }}
+      transition={{ duration: 1.5, delay: 0.3 }}
+      className="absolute inset-0"
+      style={{
+        background: "linear-gradient(135deg, hsl(var(--primary) / 0.08) 0%, transparent 40%, hsl(var(--accent) / 0.06) 70%, transparent 100%)",
+      }}
+    />
+  </>
+);
+
+const shapeComponents: Record<HeroStyle, React.FC> = {
   diagonal: DiagonalShapes,
   rectangular: RectangularShapes,
   mixed: MixedShapes,
+  gradient: GradientBackground,
 };
 
-const labels: Record<ShapeStyle, string> = {
+const labels: Record<HeroStyle, string> = {
   diagonal: "Diagonal Slabs",
-  rectangular: "Rectangular Blocks",
-  mixed: "Mixed Geometric",
+  rectangular: "Rectangular",
+  mixed: "Mixed Geo",
+  gradient: "Gradient",
 };
 
 const Hero = () => {
-  const [style, setStyle] = useState<ShapeStyle>("diagonal");
+  const [style, setStyle] = useState<HeroStyle>("gradient");
   const ShapeComponent = shapeComponents[style];
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
       {/* Style switcher — remove after choosing */}
-      <div className="absolute top-24 right-6 z-20 flex gap-2">
-        {(Object.keys(labels) as ShapeStyle[]).map((key) => (
+      <div className="absolute top-24 right-6 z-20 flex gap-2 flex-wrap justify-end">
+        {(Object.keys(labels) as HeroStyle[]).map((key) => (
           <button
             key={key}
             onClick={() => setStyle(key)}
