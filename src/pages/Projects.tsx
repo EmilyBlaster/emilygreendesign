@@ -1,9 +1,6 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import ProjectCard from "@/components/ProjectCard";
-import DemoReel from "@/components/DemoReel";
 import Footer from "@/components/Footer";
-import FloatingAlert from "@/components/FloatingAlert";
+import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -33,27 +30,23 @@ const projects = [
   },
 ];
 
-const Index = () => {
+const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-
-      {/* Projects Section */}
-      <section id="projects" className="py-24">
+      <div className="pt-28 pb-24">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mb-16"
           >
-            <h2 className="font-display text-5xl md:text-7xl tracking-wider">
-              Selected Work
-            </h2>
+            <h1 className="font-display text-6xl md:text-8xl tracking-wider">
+              Projects
+            </h1>
             <p className="font-body text-lg text-muted-foreground mt-4 max-w-xl">
-              Capstone projects from the Instructional Design & Technology MS program — each grounded in research and focused on real outcomes.
+              Selected capstone projects demonstrating instructional design thinking, research methodology, and measurable learning outcomes.
             </p>
           </motion.div>
 
@@ -63,13 +56,10 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      <DemoReel />
+      </div>
       <Footer />
-      <FloatingAlert />
     </div>
   );
 };
 
-export default Index;
+export default Projects;
