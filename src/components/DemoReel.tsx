@@ -26,15 +26,13 @@ const DemoReel = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="aspect-video rounded-xl overflow-hidden bg-foreground/10 border border-muted/20 flex items-center justify-center">
-            <div className="text-center">
-              <p className="font-display text-2xl tracking-wider opacity-60">
-                Video Coming Soon
-              </p>
-              <p className="font-body text-sm mt-2 opacity-40">
-                Embed your demo reel video here
-              </p>
-            </div>
+          <div className="aspect-video rounded-xl overflow-hidden border border-muted/20">
+            <iframe
+              src="https://player.vimeo.com/video/1165485464?h=0&title=0&byline=0&portrait=0"
+              className="w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </motion.div>
       </div>
