@@ -17,7 +17,7 @@ const FloatingAlert = () => {
         whileHover={{ rotate: 0, scale: 1.05 }}
         className="fixed bottom-6 right-6 z-50 cursor-pointer"
       >
-        <Link to="/projects/the-algorithm-syllabus" className="block">
+        <Link to="/project/the-algorithm-syllabus" className="block">
           <div className="relative bg-accent text-accent-foreground rounded-2xl px-5 py-4 shadow-2xl max-w-[160px]">
             <button
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); setVisible(false); }}
