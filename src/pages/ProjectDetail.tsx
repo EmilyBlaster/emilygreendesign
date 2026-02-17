@@ -267,7 +267,7 @@ const ProjectDetail = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Launch the Learning Journey
+                  {slug === "creators-quest" ? "Launch the Game" : "Launch the Learning Journey"}
                   <ExternalLink size={20} />
                 </a>
               </motion.div>
