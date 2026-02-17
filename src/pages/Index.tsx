@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FloatingAlert from "@/components/FloatingAlert";
 import { motion } from "framer-motion";
 import algorithmCover from "@/assets/algorithm-syllabus-cover.png";
+import ethicalAiCover from "@/assets/ethical-ai-cover.png";
 
 const projects = [
   {
@@ -24,6 +25,7 @@ const projects = [
       "A mobile-first microcredential teaching healthcare professionals to use AI ethically — covering HIPAA compliance, bias identification, and prompt engineering.",
     colorBlock: "green" as const,
     slug: "ethical-ai-healthcare",
+    coverImage: ethicalAiCover,
   },
   {
     title: "Creator's Quest",
