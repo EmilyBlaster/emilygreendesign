@@ -54,7 +54,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="font-body text-lg md:text-xl text-muted-foreground mt-8 max-w-xl leading-relaxed"
           >
-            I'm Emily — a learning experience designer who blends strategy, media, and behavioral science. It's the whole caboodle.
+            I'm Emily — a learning experience designer who blends strategy, media, and behavioral science.
           </motion.p>
 
           <motion.div
