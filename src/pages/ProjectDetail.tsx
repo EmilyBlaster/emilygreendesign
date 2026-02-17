@@ -166,15 +166,25 @@ const ProjectDetail = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-16 rounded-xl overflow-hidden border border-border"
+              className="mt-16"
             >
-              <iframe
-                src="https://emilyblaster.github.io/peoples-professors-design/showcase.html"
-                title="The People's Professors — Showcase"
-                className="w-full border-0"
-                style={{ height: "3200px" }}
-                loading="lazy"
-              />
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Interactive Showcase
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Explore the full interactive showcase below — featuring the DIY zine aesthetic, the gamified sticker collection system, the AI-powered "Algorithm" chatbot, and the research foundation behind the design decisions.
+                </p>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-border">
+                <iframe
+                  src="https://emilyblaster.github.io/peoples-professors-design/showcase.html"
+                  title="The People's Professors — Showcase"
+                  className="w-full border-0"
+                  style={{ height: "3200px" }}
+                  loading="lazy"
+                />
+              </div>
             </motion.div>
           )}
 
