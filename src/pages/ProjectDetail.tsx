@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import peoplesProfessorsCover from "@/assets/peoples-professors-cover.png";
 
 const projectData: Record<string, {
   title: string;
@@ -109,11 +110,21 @@ const ProjectDetail = () => {
                 {project.overview}
               </p>
               {/* Placeholder for images */}
-              <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
-                <p className="font-display text-sm tracking-widest text-muted-foreground">
-                  Add project image here
-                </p>
-              </div>
+              {slug === "the-algorithm-syllabus" ? (
+                <div className="mt-8 rounded-lg overflow-hidden">
+                  <img
+                    src={peoplesProfessorsCover}
+                    alt="The People's Professors — Content Creator Strategies for Learning Design"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+              ) : (
+                <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
+                  <p className="font-display text-sm tracking-widest text-muted-foreground">
+                    Add project image here
+                  </p>
+                </div>
+              )}
             </ContentSection>
 
             <ContentSection title="Target Audience" delay={0.2}>
