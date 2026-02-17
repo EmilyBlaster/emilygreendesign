@@ -62,7 +62,7 @@ const projectData: Record<string, {
   "audition-tutorials": {
     title: "Adobe Audition Tutorial Series",
     subtitle: "Multimedia Instruction",
-    colorBlock: "bg-block-dark",
+    colorBlock: "bg-block-pink",
     overview:
       "A comprehensive quick-hit video tutorial series designed for South Plains College, teaching essential audio cleanup techniques in Adobe Audition. Each concept is explained in under 60 seconds, covering Denoise, Spot Healing Brush, De-Reverb, and noise reduction processing — giving learners practical workflows for producing broadcast-ready audio.",
     audience:
