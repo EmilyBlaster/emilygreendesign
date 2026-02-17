@@ -7,6 +7,7 @@ import FloatingAlert from "@/components/FloatingAlert";
 import { motion } from "framer-motion";
 import algorithmCover from "@/assets/algorithm-syllabus-cover.png";
 import ethicalAiCover from "@/assets/ethical-ai-cover.png";
+import creatorsQuestCover from "@/assets/creators-quest-cover.jpg";
 
 const projects = [
   {
@@ -34,6 +35,7 @@ const projects = [
       "A gamified role-playing experience where aspiring content creators develop real-world skills through meaningful choices, trade-offs, and branching narratives.",
     colorBlock: "pink" as const,
     slug: "creators-quest",
+    coverImage: creatorsQuestCover,
   },
 ];
 
