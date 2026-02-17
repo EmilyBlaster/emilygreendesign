@@ -34,8 +34,8 @@ const projectData: Record<string, {
   "ethical-ai-healthcare": {
     title: "Ethical AI for Healthcare",
     subtitle: "Microcredential",
-    colorBlock: "bg-block-green",
-    courseUrl: "https://ethical-ai-healthcare-infographic.lovable.app/",
+    colorBlock: "bg-block-pink",
+    courseUrl: "https://ethical-ai-healthcare-infographic.lovable.app",
     overview:
       "A mobile-first microcredential designed for healthcare professionals navigating generative AI in clinical and administrative settings. Rather than treating AI training like another compliance checkbox, this course focuses on application over theory — teaching learners to write ethical prompts, identify bias in AI outputs, and maintain HIPAA compliance in real workflows.",
     audience:
@@ -236,7 +236,7 @@ const ProjectDetail = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Launch the Course
+                  Launch the Learning Journey
                   <ExternalLink size={20} />
                 </a>
               </motion.div>
