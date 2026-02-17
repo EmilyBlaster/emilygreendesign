@@ -51,13 +51,13 @@ const projectData: Record<string, {
     colorBlock: "bg-block-pink",
     courseUrl: "https://creatorquest.emilygreendesign.com/",
     overview:
-      "An educational role-playing game that transforms the content creator journey into an engaging, gamified learning experience. Players create a character, make meaningful choices that affect their stats — followers, authenticity, burnout, and income — and discover one of multiple endings based on their decisions. The game takes 10–15 minutes and every choice matters.",
+      "In an era where digital content creation has become a viable career path, aspiring creators face a unique challenge: developing the multifaceted skills needed to succeed. Creator's Quest transforms this journey into an engaging, gamified role-playing experience. Players create a character, make meaningful choices that affect their stats — followers, authenticity, burnout, and income — and discover one of multiple endings based on their decisions. The game takes 10–15 minutes and every choice matters.",
     audience:
-      "Aspiring content creators facing the challenge of developing multifaceted skills needed to succeed in the creator economy. Players navigate five key dimensions — authenticity, growth, quality, business, and community — reflecting real-world content creation strategies.",
+      "Aspiring content creators navigating five key dimensions — authenticity, growth, quality, business, and community — reflecting real-world content creation strategies. Players learn platform strategy, authenticity balance, sustainable growth, and monetization ethics through interactive gameplay.",
     outcomes:
-      "Learners develop skills across platform strategy, authenticity balance, sustainable growth, and monetization ethics. Through interactive puzzles and quizzes, players unlock knowledge while experiencing real-world trade-offs between energy, finances, mental health, and community relationships. Multiple pathways ensure player agency and engagement.",
+      "Through interactive puzzles and quizzes, players develop skills across four learning areas: platform strategy (matching content to the right audience), authenticity balance (staying true while growing reach), sustainable growth (building without burning out), and monetization ethics (making money without compromising values). A branching narrative ensures player agency, and multiple endings — Influencer, Educator, Entrepreneur, or other paths — reinforce that every decision has real consequences.",
     methodology:
-      "Grounded in serious game design principles and evidence-based gamification research. Li et al. (2023) found gamification produces a large effect size (g = 0.822) on learning outcomes. The game incorporates progressive skill development, branching narratives for player agency, safe failure environments for experimentation, and adaptive difficulty adjustment. Research by Dehghanzadeh et al. (2024), De Gloria et al. (2014), and Lampropoulos & Sidiropoulos (2024) informed the design approach.",
+      "Creator's Quest falls into the category of \"serious games\" — interactive applications designed beyond entertainment to incorporate educational objectives. Research consistently demonstrates that gamification significantly enhances learning outcomes: Li et al. (2023) found a large effect size (g = 0.822) across 5,071 participants, and Lampropoulos & Sidiropoulos (2024) confirmed 39% improved success rates and 130% improved excellence rates compared to online learning. The game incorporates progressive skill development (Dehghanzadeh et al., 2024), safe failure environments for experimentation (De Gloria et al., 2014), and situated cognition through real-world trade-offs.",
   },
 };
 
@@ -212,6 +212,37 @@ const ProjectDetail = () => {
                   <iframe
                     src="https://player.vimeo.com/video/1139728982?h=&title=0&byline=0&portrait=0"
                     title="Ethical AI for Healthcare — Course Walkthrough"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Creator's Quest Video */}
+          {slug === "creators-quest" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Game Preview
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the introduction below for a preview of the Creator's Quest experience — featuring character creation, branching narratives, and the real-world trade-offs that drive gameplay.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1127634132?h=&title=0&byline=0&portrait=0"
+                    title="Creator's Quest — Game Preview"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
