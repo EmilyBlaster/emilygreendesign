@@ -36,11 +36,11 @@ const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index, co
       <Link to={`/project/${slug}`} className="group block">
         <div className="rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
           {coverImage ? (
-            <div className="aspect-[4/3] overflow-hidden rounded-lg relative bg-muted flex items-center justify-center">
+            <div className="aspect-[16/10] overflow-hidden rounded-lg relative bg-muted">
               <img
                 src={coverImage}
                 alt={title}
-                className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300" />
             </div>
