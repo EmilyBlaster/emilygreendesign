@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
+import algorithmCover from "@/assets/algorithm-syllabus-cover.png";
 
 const projects = [
   {
@@ -11,6 +12,7 @@ const projects = [
       "Learn the 5 strategies TikTok creators use to teach millions — and apply them to workplace nano-learning.",
     colorBlock: "blue" as const,
     slug: "the-algorithm-syllabus",
+    coverImage: algorithmCover,
   },
   {
     title: "Project Two",

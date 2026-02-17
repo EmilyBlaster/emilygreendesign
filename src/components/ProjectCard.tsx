@@ -8,6 +8,7 @@ interface ProjectCardProps {
   colorBlock: "green" | "blue" | "pink" | "dark";
   slug: string;
   index: number;
+  coverImage?: string;
 }
 
 const colorMap = {
@@ -17,7 +18,7 @@ const colorMap = {
   dark: "bg-block-dark",
 };
 
-const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index, coverImage }: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -26,17 +27,27 @@ const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index }: 
       transition={{ duration: 0.6, delay: index * 0.15 }}
     >
       <Link to={`/project/${slug}`} className="group block">
-        <div className={`${colorMap[colorBlock]} rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]`}>
-          <div className="aspect-[4/3] flex items-center justify-center p-8">
-            <div className="text-center">
-              <h3 className="font-display text-3xl md:text-4xl tracking-wider leading-none">
-                {title}
-              </h3>
-              <p className="font-display text-lg tracking-widest mt-2 opacity-80">
-                {subtitle}
-              </p>
+        <div className={`${coverImage ? '' : colorMap[colorBlock]} rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]`}>
+          {coverImage ? (
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img
+                src={coverImage}
+                alt={title}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
-          </div>
+          ) : (
+            <div className="aspect-[4/3] flex items-center justify-center p-8">
+              <div className="text-center">
+                <h3 className="font-display text-3xl md:text-4xl tracking-wider leading-none">
+                  {title}
+                </h3>
+                <p className="font-display text-lg tracking-widest mt-2 opacity-80">
+                  {subtitle}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
         <div className="mt-4 px-1">
           <p className="font-body text-sm text-muted-foreground leading-relaxed">
