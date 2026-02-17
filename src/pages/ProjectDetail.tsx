@@ -17,7 +17,7 @@ const projectData: Record<string, {
   "the-algorithm-syllabus": {
     title: "The Algorithm Syllabus",
     subtitle: "Interactive eLearning",
-    colorBlock: "bg-block-blue",
+    colorBlock: "bg-block-pink",
     courseUrl: "https://emilyblaster.github.io/The-People-s-Professors/#/",
     overview:
       "\"The algorithm has become the new syllabus.\" This interactive eLearning experience explores the 5 strategies TikTok creators use to teach millions — and shows how to apply them to workplace nano-learning. Built as a DIY zine-style web app, it connects creators to a history of grassroots publishing that challenges gatekeeping.",
