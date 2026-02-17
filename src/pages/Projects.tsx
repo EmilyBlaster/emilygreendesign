@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import algorithmCover from "@/assets/algorithm-syllabus-cover.png";
+import ethicalAiCover from "@/assets/ethical-ai-cover.png";
 
 const projects = [
   {
@@ -15,20 +16,21 @@ const projects = [
     coverImage: algorithmCover,
   },
   {
-    title: "Project Two",
-    subtitle: "eLearning Module",
+    title: "Ethical AI for Healthcare",
+    subtitle: "Microcredential",
     description:
-      "Interactive learning experience designed with behavioral science principles and measurable outcomes at its core.",
+      "A mobile-first microcredential teaching healthcare professionals to use AI ethically — covering HIPAA compliance, bias identification, and prompt engineering.",
     colorBlock: "green" as const,
-    slug: "project-two",
+    slug: "ethical-ai-healthcare",
+    coverImage: ethicalAiCover,
   },
   {
-    title: "Project Three",
-    subtitle: "UX & Learning",
+    title: "Creator's Quest",
+    subtitle: "Educational RPG",
     description:
-      "A case study bridging user experience design and instructional methodology to create impactful learning moments.",
+      "A gamified role-playing experience where aspiring content creators develop real-world skills through meaningful choices, trade-offs, and branching narratives.",
     colorBlock: "pink" as const,
-    slug: "project-three",
+    slug: "creators-quest",
   },
 ];
 
