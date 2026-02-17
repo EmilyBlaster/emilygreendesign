@@ -157,7 +157,28 @@ const ProjectDetail = () => {
                 </div>
               </div>
             </ContentSection>
+          </div>
 
+          {/* Showcase embed — full width */}
+          {slug === "the-algorithm-syllabus" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-16 rounded-xl overflow-hidden border border-border"
+            >
+              <iframe
+                src="https://emilyblaster.github.io/peoples-professors-design/showcase.html"
+                title="The People's Professors — Showcase"
+                className="w-full border-0"
+                style={{ height: "3200px" }}
+                loading="lazy"
+              />
+            </motion.div>
+          )}
+
+          <div className="max-w-3xl mx-auto mt-16">
             {project.courseUrl && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
