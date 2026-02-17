@@ -286,7 +286,7 @@ const ProjectDetail = () => {
               <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
                 <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                   <iframe
-                    src="https://player.vimeo.com/video/1044093781?h=&title=0&byline=0&portrait=0"
+                    src="https://player.vimeo.com/video/1122311978?h=&title=0&byline=0&portrait=0"
                     title="South Plains College Adobe Audition Series"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allow="autoplay; fullscreen; picture-in-picture"
