@@ -59,6 +59,20 @@ const projectData: Record<string, {
     methodology:
       "Creator's Quest falls into the category of \"serious games\" — interactive applications designed beyond entertainment to incorporate educational objectives. Research consistently demonstrates that gamification significantly enhances learning outcomes: Li et al. (2023) found a large effect size (g = 0.822) across 5,071 participants, and Lampropoulos & Sidiropoulos (2024) confirmed 39% improved success rates and 130% improved excellence rates compared to online learning. The game incorporates progressive skill development (Dehghanzadeh et al., 2024), safe failure environments for experimentation (De Gloria et al., 2014), and situated cognition through real-world trade-offs.",
   },
+  "audition-tutorials": {
+    title: "Adobe Audition Tutorial Series",
+    subtitle: "Multimedia Instruction",
+    colorBlock: "bg-block-dark",
+    courseUrl: "https://www.emilygreendesign.com/uxinthewild/quick-tips-advanced-audition-editing",
+    overview:
+      "A comprehensive quick-hit video tutorial series designed for South Plains College, teaching essential audio cleanup techniques in Adobe Audition. Each concept is explained in under 60 seconds, covering Denoise, Spot Healing Brush, De-Reverb, and noise reduction processing — giving learners practical workflows for producing broadcast-ready audio.",
+    audience:
+      "Students and professionals working with podcast recordings, interview audio, voice-overs, and field recordings who need to quickly clean up audio artifacts without extensive training.",
+    outcomes:
+      "Learners apply four key audio cleanup techniques: capturing noise prints and applying Denoise reduction, using the Spot Healing Brush for isolated imperfections, leveraging De-Reverb to restore clarity, and processing complex multi-layered noise scenarios. Each technique is demonstrated with real audio examples.",
+    methodology:
+      "Built on multimedia learning principles (Mayer, 2009) with a segmenting strategy — each technique is isolated into sub-60-second demonstrations to reduce cognitive load. The series follows a worked-example approach, showing the complete workflow from problem identification to polished result.",
+  },
 };
 
 const ProjectDetail = () => {
@@ -243,6 +257,37 @@ const ProjectDetail = () => {
                   <iframe
                     src="https://player.vimeo.com/video/1127634132?h=&title=0&byline=0&portrait=0"
                     title="Creator's Quest — Game Preview"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Audition Tutorials Video */}
+          {slug === "audition-tutorials" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Tutorial Series
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the full Adobe Audition tutorial series below — covering Denoise, Spot Healing, De-Reverb, and advanced noise reduction techniques.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1044093781?h=&title=0&byline=0&portrait=0"
+                    title="South Plains College Adobe Audition Series"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen

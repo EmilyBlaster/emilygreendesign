@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import algorithmCover from "@/assets/algorithm-syllabus-cover.png";
 import ethicalAiCover from "@/assets/ethical-ai-cover.png";
 import creatorsQuestCover from "@/assets/creators-quest-cover.jpg";
+import auditionCover from "@/assets/audition-tutorial-cover.png";
 
 const projects = [
   {
@@ -33,6 +34,15 @@ const projects = [
     colorBlock: "pink" as const,
     slug: "creators-quest",
     coverImage: creatorsQuestCover,
+  },
+  {
+    title: "Adobe Audition Tutorial Series",
+    subtitle: "Multimedia Instruction",
+    description:
+      "A quick-hit video tutorial series teaching audio cleanup techniques in Adobe Audition — each concept explained in under 60 seconds.",
+    colorBlock: "dark" as const,
+    slug: "audition-tutorials",
+    coverImage: auditionCover,
   },
 ];
 
