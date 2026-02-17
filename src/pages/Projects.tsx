@@ -52,7 +52,7 @@ const Projects = () => {
               Projects
             </h1>
             <p className="font-body text-lg text-muted-foreground mt-4 max-w-xl">
-              Selected capstone projects demonstrating instructional design thinking, research methodology, and measurable learning outcomes.
+              Selected projects demonstrating instructional design thinking, research methodology, and measurable learning outcomes.
             </p>
           </motion.div>
 

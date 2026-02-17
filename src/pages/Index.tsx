@@ -56,10 +56,10 @@ const Index = () => {
             className="mb-16"
           >
             <h2 className="font-display text-5xl md:text-7xl tracking-wider">
-              Selected Work
+              Selected Projects
             </h2>
             <p className="font-body text-lg text-muted-foreground mt-4 max-w-xl">
-              Capstone projects from the Instructional Design & Technology MS program — each grounded in research and focused on real outcomes.
+              Projects from the Instructional Design & Technology MS program — each grounded in research and focused on real outcomes.
             </p>
           </motion.div>
 
