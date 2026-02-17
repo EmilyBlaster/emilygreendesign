@@ -29,31 +29,33 @@ const projectData: Record<string, {
     methodology:
       "Grounded in Mayer's Multimedia Principles, Merrill's First Principles of Instruction, Vygotsky's scaffolding theory, and research on TikTok as nano-learning (Khlaif & Salha, 2021) and participatory culture (Jenkins et al., 2009).",
   },
-  "project-two": {
-    title: "Project Two",
-    subtitle: "eLearning Module",
+  "ethical-ai-healthcare": {
+    title: "Ethical AI for Healthcare",
+    subtitle: "Microcredential",
     colorBlock: "bg-block-green",
+    courseUrl: "https://ethical-ai-healthcare-infographic.lovable.app/",
     overview:
-      "An interactive eLearning experience built on behavioral science principles. Replace this with your actual project description, discussing the problem space and your design approach.",
+      "A mobile-first microcredential designed for healthcare professionals navigating generative AI in clinical and administrative settings. Rather than treating AI training like another compliance checkbox, this course focuses on application over theory — teaching learners to write ethical prompts, identify bias in AI outputs, and maintain HIPAA compliance in real workflows.",
     audience:
-      "Describe the learners this module was designed for. What were their needs, motivations, and existing skill levels?",
+      "Healthcare workers — nurses, administrators, and physicians — who are already using AI tools like ChatGPT in their daily work, with or without formal guidance. The course meets them where they are: on their phones, between patient rounds, during lunch breaks.",
     outcomes:
-      "What measurable outcomes did this project target? How did you assess whether learners achieved genuine understanding and behavior transfer?",
+      "Learners develop four critical competencies: ethical prompt engineering while maintaining patient privacy, HIPAA-compliant AI use, bias identification in AI-generated content, and practical implementation skills for integrating AI into team workflows. Every module ends with practical demonstration, not knowledge checks.",
     methodology:
-      "Explain your research and design process — from analysis through development and evaluation. What tools, frameworks, and methods shaped this work?",
+      "Six modules over 4.75 hours following a progressive structure: Modules 1–2 build AI fundamentals and prompt engineering foundations, Modules 3–4 cover clinical and administrative applications, and Modules 5–6 tackle ethics, bias mitigation, and team implementation. Built on SC Training (formerly EdApp) for mobile-first microlearning with SCORM compliance. Progressive badges lead to a final certificate.",
   },
-  "project-three": {
-    title: "Project Three",
-    subtitle: "UX & Learning",
+  "creators-quest": {
+    title: "Creator's Quest",
+    subtitle: "Educational RPG",
     colorBlock: "bg-block-pink",
+    courseUrl: "https://creatorquest.emilygreendesign.com/",
     overview:
-      "A case study at the intersection of UX design and instructional methodology. Replace this with your actual project narrative and design rationale.",
+      "An educational role-playing game that transforms the content creator journey into an engaging, gamified learning experience. Players create a character, make meaningful choices that affect their stats — followers, authenticity, burnout, and income — and discover one of multiple endings based on their decisions. The game takes 10–15 minutes and every choice matters.",
     audience:
-      "Who were the users/learners? What user research informed your understanding of their needs and pain points?",
+      "Aspiring content creators facing the challenge of developing multifaceted skills needed to succeed in the creator economy. Players navigate five key dimensions — authenticity, growth, quality, business, and community — reflecting real-world content creation strategies.",
     outcomes:
-      "What learning and usability outcomes were targeted? How did you measure success across both UX and instructional dimensions?",
+      "Learners develop skills across platform strategy, authenticity balance, sustainable growth, and monetization ethics. Through interactive puzzles and quizzes, players unlock knowledge while experiencing real-world trade-offs between energy, finances, mental health, and community relationships. Multiple pathways ensure player agency and engagement.",
     methodology:
-      "Describe the blended methodology — UX research techniques combined with instructional design frameworks. How did these approaches complement each other?",
+      "Grounded in serious game design principles and evidence-based gamification research. Li et al. (2023) found gamification produces a large effect size (g = 0.822) on learning outcomes. The game incorporates progressive skill development, branching narratives for player agency, safe failure environments for experimentation, and adaptive difficulty adjustment. Research by Dehghanzadeh et al. (2024), De Gloria et al. (2014), and Lampropoulos & Sidiropoulos (2024) informed the design approach.",
   },
 };
 
