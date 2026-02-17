@@ -4,6 +4,8 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import peoplesProfessorsCover from "@/assets/peoples-professors-cover.png";
+// import ethicalAiCover from "@/assets/ethical-ai-cover.png"; // uncomment once image is added
+// import ethicalAiInfographic from "@/assets/ethical-ai-infographic.png"; // uncomment once image is added
 
 const projectData: Record<string, {
   title: string;
@@ -111,7 +113,7 @@ const ProjectDetail = () => {
               <p className="font-body text-lg leading-relaxed text-muted-foreground">
                 {project.overview}
               </p>
-              {slug === "the-algorithm-syllabus" ? (
+              {slug === "the-algorithm-syllabus" && (
                 <div className="mt-8 rounded-lg overflow-hidden">
                   <img
                     src={peoplesProfessorsCover}
@@ -119,10 +121,11 @@ const ProjectDetail = () => {
                     className="w-full h-auto rounded-lg"
                   />
                 </div>
-              ) : (
+              )}
+              {slug === "ethical-ai-healthcare" && (
                 <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
                   <p className="font-display text-sm tracking-widest text-muted-foreground">
-                    Add project image here
+                    Cover image — awaiting upload
                   </p>
                 </div>
               )}
@@ -144,18 +147,11 @@ const ProjectDetail = () => {
               <p className="font-body text-lg leading-relaxed text-muted-foreground">
                 {project.methodology}
               </p>
-              {slug !== "the-algorithm-syllabus" && (
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                    <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
-                      Add image
-                    </p>
-                  </div>
-                  <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                    <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
-                      Add image
-                    </p>
-                  </div>
+              {slug === "ethical-ai-healthcare" && (
+                <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
+                  <p className="font-display text-sm tracking-widest text-muted-foreground">
+                    Infographic image — awaiting upload
+                  </p>
                 </div>
               )}
             </ContentSection>
@@ -186,6 +182,37 @@ const ProjectDetail = () => {
                   style={{ height: "3200px" }}
                   loading="lazy"
                 />
+              </div>
+            </motion.div>
+          )}
+
+          {/* Ethical AI Video */}
+          {slug === "ethical-ai-healthcare" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Course Walkthrough
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the walkthrough below for an overview of the microcredential's structure, mobile-first design, and progressive badge system.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1139728982?h=&title=0&byline=0&portrait=0"
+                    title="Ethical AI for Healthcare — Course Walkthrough"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </motion.div>
           )}
