@@ -109,7 +109,6 @@ const ProjectDetail = () => {
               <p className="font-body text-lg leading-relaxed text-muted-foreground">
                 {project.overview}
               </p>
-              {/* Placeholder for images */}
               {slug === "the-algorithm-syllabus" ? (
                 <div className="mt-8 rounded-lg overflow-hidden">
                   <img
@@ -143,19 +142,20 @@ const ProjectDetail = () => {
               <p className="font-body text-lg leading-relaxed text-muted-foreground">
                 {project.methodology}
               </p>
-              {/* Placeholder for additional images */}
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                  <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
-                    Add image
-                  </p>
+              {slug !== "the-algorithm-syllabus" && (
+                <div className="mt-8 grid grid-cols-2 gap-4">
+                  <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
+                    <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
+                      Add image
+                    </p>
+                  </div>
+                  <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
+                    <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
+                      Add image
+                    </p>
+                  </div>
                 </div>
-                <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                  <p className="font-display text-xs tracking-widest text-muted-foreground text-center px-4">
-                    Add image
-                  </p>
-                </div>
-              </div>
+              )}
             </ContentSection>
           </div>
 
