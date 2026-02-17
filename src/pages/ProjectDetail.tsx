@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const projectData: Record<string, {
   title: string;
@@ -12,19 +12,21 @@ const projectData: Record<string, {
   audience: string;
   outcomes: string;
   methodology: string;
+  courseUrl?: string;
 }> = {
-  "project-one": {
-    title: "Project One",
-    subtitle: "Instructional Design",
+  "the-algorithm-syllabus": {
+    title: "The Algorithm Syllabus",
+    subtitle: "Interactive eLearning",
     colorBlock: "bg-block-blue",
+    courseUrl: "https://emilyblaster.github.io/The-People-s-Professors/#/",
     overview:
-      "This project explores evidence-based instructional strategies designed to promote genuine behavior change rather than mere compliance. Replace this with your actual project description, including context and significance.",
+      "\"The algorithm has become the new syllabus.\" This interactive eLearning experience explores the 5 strategies TikTok creators use to teach millions — and shows how to apply them to workplace nano-learning. Built as a DIY zine-style web app, it connects creators to a history of grassroots publishing that challenges gatekeeping.",
     audience:
-      "Describe your target audience here — their demographics, prior knowledge, learning context, and any relevant characteristics that informed your design decisions.",
+      "Workplace learning designers and L&D professionals looking to leverage short-form video strategies for nano-learning. Learners explore five creator strategies — Hook, Chunking, Visual, Engagement, and Sequencing — through a gamified sticker collection system.",
     outcomes:
-      "List the specific, measurable learning outcomes this project aimed to achieve. Explain how each outcome connects to real-world behavior change and performance improvement.",
+      "Learners identify and apply five TikTok creator strategies to workplace nano-learning contexts. A gamified sticker system tracks mastery of each strategy section, and an AI-powered chatbot (\"The Algorithm\") provides on-demand support, tips, and research context.",
     methodology:
-      "Detail the research methodologies you employed — needs analysis, formative evaluation, user testing, iterative design processes, and any theoretical frameworks that guided your approach.",
+      "Grounded in Mayer's Multimedia Principles, Merrill's First Principles of Instruction, Vygotsky's scaffolding theory, and research on TikTok as nano-learning (Khlaif & Salha, 2021) and participatory culture (Jenkins et al., 2009).",
   },
   "project-two": {
     title: "Project Two",
@@ -144,6 +146,26 @@ const ProjectDetail = () => {
                 </div>
               </div>
             </ContentSection>
+
+            {project.courseUrl && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="pt-4"
+              >
+                <a
+                  href={project.courseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Launch the Course
+                  <ExternalLink size={20} />
+                </a>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

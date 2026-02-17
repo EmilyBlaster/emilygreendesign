@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Project One",
-    subtitle: "Instructional Design",
+    title: "The Algorithm Syllabus",
+    subtitle: "Interactive eLearning",
     description:
-      "An exploration of learning outcomes, target audience analysis, and evidence-based instructional strategies for behavior change.",
+      "Learn the 5 strategies TikTok creators use to teach millions — and apply them to workplace nano-learning.",
     colorBlock: "blue" as const,
-    slug: "project-one",
+    slug: "the-algorithm-syllabus",
   },
   {
     title: "Project Two",
