@@ -4,8 +4,8 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import peoplesProfessorsCover from "@/assets/peoples-professors-cover.png";
-// import ethicalAiCover from "@/assets/ethical-ai-cover.png"; // uncomment once image is added
-// import ethicalAiInfographic from "@/assets/ethical-ai-infographic.png"; // uncomment once image is added
+import ethicalAiCover from "@/assets/ethical-ai-cover.png";
+import ethicalAiInfographic from "@/assets/ethical-ai-infographic.png";
 
 const projectData: Record<string, {
   title: string;
@@ -123,10 +123,12 @@ const ProjectDetail = () => {
                 </div>
               )}
               {slug === "ethical-ai-healthcare" && (
-                <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
-                  <p className="font-display text-sm tracking-widest text-muted-foreground">
-                    Cover image — awaiting upload
-                  </p>
+                <div className="mt-8 rounded-lg overflow-hidden">
+                  <img
+                    src={ethicalAiCover}
+                    alt="Ethical AI Prompt Engineering — LMS & Content Design"
+                    className="w-full h-auto rounded-lg"
+                  />
                 </div>
               )}
             </ContentSection>
@@ -148,10 +150,12 @@ const ProjectDetail = () => {
                 {project.methodology}
               </p>
               {slug === "ethical-ai-healthcare" && (
-                <div className="mt-8 aspect-video rounded-lg bg-muted flex items-center justify-center">
-                  <p className="font-display text-sm tracking-widest text-muted-foreground">
-                    Infographic image — awaiting upload
-                  </p>
+                <div className="mt-8 rounded-lg overflow-hidden">
+                  <img
+                    src={ethicalAiInfographic}
+                    alt="Ethical AI Prompt Engineering — Learning Journey Infographic"
+                    className="w-full h-auto rounded-lg"
+                  />
                 </div>
               )}
             </ContentSection>
