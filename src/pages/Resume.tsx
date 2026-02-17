@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Download, Mail, Globe, Phone } from "lucide-react";
+import { Download, Mail, Phone } from "lucide-react";
 
 const Resume = () => {
   return (
@@ -24,7 +24,6 @@ const Resume = () => {
             <div className="mt-4 flex flex-wrap gap-4 text-sm font-body text-muted-foreground">
               <span className="inline-flex items-center gap-1.5"><Phone size={14} /> 727-475-0036</span>
               <a href="mailto:egreen@emilygreendesign.com" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors"><Mail size={14} /> egreen@emilygreendesign.com</a>
-              <a href="https://emilygreendesign.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors"><Globe size={14} /> emilygreendesign.com</a>
             </div>
             <div className="mt-6">
               <a
