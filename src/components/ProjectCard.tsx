@@ -57,7 +57,7 @@ const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index, co
             </div>
           )}
         </div>
-        <div className={`${accentBarMap[colorBlock]} h-1 mt-3 rounded-full transition-all duration-300 group-hover:h-1.5`} />
+        <div className="bg-accent h-1 mt-3 rounded-full transition-all duration-300 group-hover:h-1.5" />
         <div className="mt-3 px-1">
           <h3 className="font-display text-lg tracking-wider text-foreground">
             {title}
