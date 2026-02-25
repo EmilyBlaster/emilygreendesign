@@ -120,34 +120,13 @@ const ProjectDetail = () => {
             </p>
           </motion.div>
 
-          {/* Launch button */}
-          {project.courseUrl && (
-            <div className="max-w-3xl mx-auto mb-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                <a
-                  href={project.courseUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  {slug === "creators-quest" ? "Launch the Game" : "Launch the Learning Journey"}
-                  <ExternalLink size={20} />
-                </a>
-              </motion.div>
-            </div>
-          )}
-
-          {/* Showcase / Video embeds — BEFORE text sections */}
+          {/* Showcase / Video embeds — right after banner */}
           {slug === "the-algorithm-syllabus" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-16"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-12"
             >
               <div className="max-w-3xl mx-auto mb-8">
                 <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
@@ -173,8 +152,8 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-16"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-12"
             >
               <div className="max-w-3xl mx-auto mb-8">
                 <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
@@ -202,8 +181,8 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-16"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-12"
             >
               <div className="max-w-3xl mx-auto mb-8">
                 <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
@@ -231,8 +210,8 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-16"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-12"
             >
               <div className="max-w-3xl mx-auto mb-8">
                 <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
@@ -254,6 +233,27 @@ const ProjectDetail = () => {
                 </div>
               </div>
             </motion.div>
+          )}
+
+          {/* Launch button — after showcase/video */}
+          {project.courseUrl && (
+            <div className="max-w-3xl mx-auto mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <a
+                  href={project.courseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  {slug === "creators-quest" ? "Launch the Game" : "Launch the Learning Journey"}
+                  <ExternalLink size={20} />
+                </a>
+              </motion.div>
+            </div>
           )}
 
           {/* Text content sections — AFTER project embeds */}
