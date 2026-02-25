@@ -48,10 +48,10 @@ const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index, co
             <div className={`${colorMap[colorBlock]} aspect-[4/3] flex items-center justify-center p-8`}>
               <div className="text-center">
                 <h3 className="font-display text-3xl md:text-4xl tracking-wider leading-none">
-                  {title}
+                  {subtitle}
                 </h3>
                 <p className="font-display text-lg tracking-widest mt-2 opacity-80">
-                  {subtitle}
+                  {title}
                 </p>
               </div>
             </div>
@@ -60,8 +60,11 @@ const ProjectCard = ({ title, subtitle, description, colorBlock, slug, index, co
         <div className="bg-accent h-1 mt-3 rounded-full transition-all duration-300 group-hover:h-1.5" />
         <div className="mt-3 px-1">
           <h3 className="font-display text-lg tracking-wider text-foreground">
-            {title}
+            {subtitle}
           </h3>
+          <p className="font-display text-xs tracking-[0.2em] text-muted-foreground mt-0.5">
+            {title}
+          </p>
           <p className="font-body text-sm text-muted-foreground leading-relaxed mt-1">
             {description}
           </p>
