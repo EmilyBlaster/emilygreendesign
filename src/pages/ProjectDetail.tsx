@@ -120,7 +120,143 @@ const ProjectDetail = () => {
             </p>
           </motion.div>
 
-          {/* Content sections */}
+          {/* Launch button */}
+          {project.courseUrl && (
+            <div className="max-w-3xl mx-auto mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <a
+                  href={project.courseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  {slug === "creators-quest" ? "Launch the Game" : "Launch the Learning Journey"}
+                  <ExternalLink size={20} />
+                </a>
+              </motion.div>
+            </div>
+          )}
+
+          {/* Showcase / Video embeds — BEFORE text sections */}
+          {slug === "the-algorithm-syllabus" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Interactive Showcase
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Explore the full interactive showcase below — featuring the DIY zine aesthetic, the gamified sticker collection system, the AI-powered "Algorithm" chatbot, and the research foundation behind the design decisions.
+                </p>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-border">
+                <iframe
+                  src="https://emilyblaster.github.io/peoples-professors-design/showcase.html"
+                  title="The People's Professors — Showcase"
+                  className="w-full border-0"
+                  style={{ height: "3200px" }}
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+          )}
+
+          {slug === "ethical-ai-healthcare" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Course Walkthrough
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the walkthrough below for an overview of the microcredential's structure, mobile-first design, and progressive badge system.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1139728982?h=&title=0&byline=0&portrait=0"
+                    title="Ethical AI for Healthcare — Course Walkthrough"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {slug === "creators-quest" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Game Preview
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the introduction below for a preview of the Creator's Quest experience — featuring character creation, branching narratives, and the real-world trade-offs that drive gameplay.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1127634132?h=&title=0&byline=0&portrait=0"
+                    title="Creator's Quest — Game Preview"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {slug === "audition-tutorials" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-16"
+            >
+              <div className="max-w-3xl mx-auto mb-8">
+                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
+                  Tutorial Series
+                </h2>
+                <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Watch the full Adobe Audition tutorial series below — covering Denoise, Spot Healing, De-Reverb, and advanced noise reduction techniques.
+                </p>
+              </div>
+              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1122311978?h=&title=0&byline=0&portrait=0"
+                    title="South Plains College Adobe Audition Series"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Text content sections — AFTER project embeds */}
           <div className="max-w-3xl mx-auto space-y-16">
             <ContentSection title="Overview" delay={0.1}>
               <p className="font-body text-lg leading-relaxed text-muted-foreground">
@@ -172,150 +308,6 @@ const ProjectDetail = () => {
                 </div>
               )}
             </ContentSection>
-          </div>
-
-          {/* Showcase embed — full width */}
-          {slug === "the-algorithm-syllabus" && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-16"
-            >
-              <div className="max-w-3xl mx-auto mb-8">
-                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
-                  Interactive Showcase
-                </h2>
-                <p className="font-body text-lg leading-relaxed text-muted-foreground">
-                  Explore the full interactive showcase below — featuring the DIY zine aesthetic, the gamified sticker collection system, the AI-powered "Algorithm" chatbot, and the research foundation behind the design decisions.
-                </p>
-              </div>
-              <div className="rounded-xl overflow-hidden border border-border">
-                <iframe
-                  src="https://emilyblaster.github.io/peoples-professors-design/showcase.html"
-                  title="The People's Professors — Showcase"
-                  className="w-full border-0"
-                  style={{ height: "3200px" }}
-                  loading="lazy"
-                />
-              </div>
-            </motion.div>
-          )}
-
-          {/* Ethical AI Video */}
-          {slug === "ethical-ai-healthcare" && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-16"
-            >
-              <div className="max-w-3xl mx-auto mb-8">
-                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
-                  Course Walkthrough
-                </h2>
-                <p className="font-body text-lg leading-relaxed text-muted-foreground">
-                  Watch the walkthrough below for an overview of the microcredential's structure, mobile-first design, and progressive badge system.
-                </p>
-              </div>
-              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
-                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                  <iframe
-                    src="https://player.vimeo.com/video/1139728982?h=&title=0&byline=0&portrait=0"
-                    title="Ethical AI for Healthcare — Course Walkthrough"
-                    className="absolute top-0 left-0 w-full h-full border-0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Creator's Quest Video */}
-          {slug === "creators-quest" && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-16"
-            >
-              <div className="max-w-3xl mx-auto mb-8">
-                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
-                  Game Preview
-                </h2>
-                <p className="font-body text-lg leading-relaxed text-muted-foreground">
-                  Watch the introduction below for a preview of the Creator's Quest experience — featuring character creation, branching narratives, and the real-world trade-offs that drive gameplay.
-                </p>
-              </div>
-              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
-                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                  <iframe
-                    src="https://player.vimeo.com/video/1127634132?h=&title=0&byline=0&portrait=0"
-                    title="Creator's Quest — Game Preview"
-                    className="absolute top-0 left-0 w-full h-full border-0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Audition Tutorials Video */}
-          {slug === "audition-tutorials" && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-16"
-            >
-              <div className="max-w-3xl mx-auto mb-8">
-                <h2 className="font-display text-3xl tracking-wider mb-4 text-foreground">
-                  Tutorial Series
-                </h2>
-                <p className="font-body text-lg leading-relaxed text-muted-foreground">
-                  Watch the full Adobe Audition tutorial series below — covering Denoise, Spot Healing, De-Reverb, and advanced noise reduction techniques.
-                </p>
-              </div>
-              <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border">
-                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                  <iframe
-                    src="https://player.vimeo.com/video/1122311978?h=&title=0&byline=0&portrait=0"
-                    title="South Plains College Adobe Audition Series"
-                    className="absolute top-0 left-0 w-full h-full border-0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          <div className="max-w-3xl mx-auto mt-16">
-            {project.courseUrl && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="pt-4"
-              >
-                <a
-                  href={project.courseUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 font-display text-lg tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  {slug === "creators-quest" ? "Launch the Game" : "Launch the Learning Journey"}
-                  <ExternalLink size={20} />
-                </a>
-              </motion.div>
-            )}
           </div>
         </div>
       </div>
