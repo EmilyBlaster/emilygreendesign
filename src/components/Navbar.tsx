@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Projects", path: "/projects" },
+  { label: "About", path: "/about" },
   { label: "Resume", path: "/resume" },
 ];
 
