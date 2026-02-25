@@ -112,12 +112,12 @@ const ProjectDetail = () => {
             transition={{ duration: 0.6 }}
             className={`${project.colorBlock} rounded-xl p-12 md:p-20 mb-16`}
           >
-            <p className="font-display text-lg tracking-[0.3em] opacity-70 mb-2">
-              {project.subtitle}
-            </p>
             <h1 className="font-display text-5xl md:text-7xl tracking-wider">
-              {project.title}
+              {project.subtitle}
             </h1>
+            <p className="font-display text-lg tracking-[0.3em] opacity-70 mt-2">
+              {project.title}
+            </p>
           </motion.div>
 
           {/* Content sections */}
