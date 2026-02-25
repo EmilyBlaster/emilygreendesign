@@ -24,7 +24,7 @@ const About = () => {
                 Hi, I'm Emily, a Learning Experience Designer who believes that effective training isn't about checking boxes. It's about changing behaviors and driving real results.
               </p>
               <p className="font-body text-lg leading-relaxed text-muted-foreground mt-4">
-                With over a decade of experience creating learning solutions for organizations like Apple, Johnson & Johnson, Intuit, and T-Mobile, I've learned that the best training experiences don't just inform — they transform. My approach goes beyond traditional compliance education to design experiences that actually stick and make a measurable impact on organizational performance.
+                With over a decade of experience creating learning solutions for organizations like Airbnb, Apple, Johnson & Johnson, Intuit, and T-Mobile, I've learned that the best training experiences don't just inform — they transform. My approach goes beyond traditional compliance education to design experiences that actually stick and make a measurable impact on organizational performance.
               </p>
             </motion.div>
 
@@ -57,14 +57,9 @@ const About = () => {
               <h2 className="font-display text-3xl tracking-wider mb-6 pb-3 border-b-2 border-primary">
                 What Makes My Work Different
               </h2>
-              <div className="space-y-4 font-body text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  I bring an anthropological lens to learning design, focusing on understanding <em>why</em> people do what they do before prescribing solutions. This means I'm as interested in the workflow, the culture, and the real-world context as I am in the content itself. I use Action Mapping methodology and the Kirkpatrick Model to ensure every learning experience ties directly to business outcomes — not just completion rates.
-                </p>
-                <p>
-                  My background spans healthcare education reaching 180 million women globally, supply chain training across 251 suppliers in 31 countries, and leadership development programs that have achieved 15–20% improvement in key metrics. Whether I'm designing interactive manager simulators, gamified medical training, or compliance programs people actually want to complete — my goal remains the same: create learning that changes what people <em>do</em>, not just what they know.
-                </p>
-              </div>
+              <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  I bring an anthropological lens to learning design — understanding <em>why</em> people do what they do before prescribing solutions. Using Action Mapping and the Kirkpatrick Model, I tie every experience directly to business outcomes. My work spans healthcare education reaching 180M women globally, supply chain training across 31 countries, and leadership programs achieving 15–20% improvement in key metrics. The goal is always the same: change what people <em>do</em>, not just what they know.
+              </p>
             </motion.section>
 
             <motion.section
@@ -76,14 +71,9 @@ const About = () => {
               <h2 className="font-display text-3xl tracking-wider mb-6 pb-3 border-b-2 border-primary">
                 Beyond the Design Work
               </h2>
-              <div className="space-y-4 font-body text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  I'm currently pursuing my Master's in Instructional Design and Technology at Full Sail University, and I'm a certified Google UX professional. I'm passionate about accessibility — from creating audio syllabi for students with visual impairments to ensuring every learning experience meets ADA standards. I also believe in using plain language and conversational design, because learning shouldn't feel like homework.
-                </p>
-                <p>
-                  When I'm not designing training experiences, you might find me experimenting with audio production, exploring the intersection of serious games and medical education, or diving deep into how we can make learning more human-centered.
-                </p>
-              </div>
+              <p className="font-body text-lg leading-relaxed text-muted-foreground">
+                  Currently pursuing my MS in Instructional Design & Technology at Full Sail University and a certified Google UX professional. I'm passionate about accessibility, plain language, and making learning feel human — not like homework. Outside of work, I'm exploring audio production, serious games in medical education, and human-centered design.
+              </p>
             </motion.section>
 
             <motion.section
