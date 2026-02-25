@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Resume from "./pages/Resume";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
+          <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/project/project-two" element={<Navigate to="/project/ethical-ai-healthcare" replace />} />
           <Route path="/project/project-three" element={<Navigate to="/project/creators-quest" replace />} />
