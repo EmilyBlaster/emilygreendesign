@@ -90,11 +90,15 @@ const Resume = () => {
             {/* Education */}
             <ResumeSection title="Education">
               <ResumeItem title="Master of Science (MS), ID&T" org="Full Sail University — Winter Park, FL" date="" />
+              <ResumeItem title="Post Baccalaureate Education Certification — COE" org="Saint Petersburg College — Saint Petersburg, FL" date="" />
+              <ResumeItem title="B.A. Women's Studies / Communications" org="University of South Florida — Tampa, FL" date="" />
+            </ResumeSection>
+
+            {/* Certifications */}
+            <ResumeSection title="Certifications">
               <ResumeItem title="Graphic Design Certification" org="Rhode Island School of Design — Providence, RI" date="" />
               <ResumeItem title="Google UX Design Certificate" org="Google" date="December 2022" />
               <ResumeItem title="Medical Writing for Healthcare Professionals Certificate" org="" date="October 2021" />
-              <ResumeItem title="Post Baccalaureate Education Certification — COE" org="Saint Petersburg College — Saint Petersburg, FL" date="" />
-              <ResumeItem title="B.A. Women's Studies / Communications" org="University of South Florida — Tampa, FL" date="" />
             </ResumeSection>
 
             {/* Skills */}
