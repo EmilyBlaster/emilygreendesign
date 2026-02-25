@@ -27,7 +27,7 @@ const Resume = () => {
             </div>
             <div className="mt-6">
               <a
-                href="/Emily_Green_LXD_2026.pdf"
+                href={`${import.meta.env.BASE_URL}Emily_Green_LXD_2026.pdf`}
                 download
                 className="inline-flex items-center gap-2 bg-block-dark font-display text-sm tracking-[0.2em] px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               >
