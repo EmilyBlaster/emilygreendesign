@@ -89,7 +89,7 @@ const Resume = () => {
 
             {/* Education */}
             <ResumeSection title="Education">
-              <ResumeItem title="Master of Science (MS), ID&T" org="Full Sail University — Winter Park, FL" date="March 2025 — March 2026" />
+              <ResumeItem title="Master of Science (MS), ID&T" org="Full Sail University — Winter Park, FL" date="" />
               <ResumeItem title="Graphic Design Certification" org="Rhode Island School of Design — Providence, RI" date="" />
               <ResumeItem title="Google UX Design Certificate" org="Google" date="December 2022" />
               <ResumeItem title="Medical Writing for Healthcare Professionals Certificate" org="" date="October 2021" />
