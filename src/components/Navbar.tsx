@@ -1,5 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -10,6 +14,7 @@ const navItems = [
 
 const Navbar = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.nav
@@ -22,7 +27,9 @@ const Navbar = () => {
         <Link to="/" className="font-display text-2xl tracking-widest text-foreground">
           Emily Green
         </Link>
-        <div className="flex items-center gap-8">
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -37,6 +44,40 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden text-foreground p-2"
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu className="h-6 w-6" />
+        </button>
+
+        {/* Mobile sheet */}
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetContent side="right" className="w-64 pt-12">
+            <VisuallyHidden>
+              <SheetTitle>Navigation Menu</SheetTitle>
+            </VisuallyHidden>
+            <div className="flex flex-col gap-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setOpen(false)}
+                  className={`font-display text-lg tracking-[0.2em] transition-colors hover:text-primary ${
+                    location.pathname === item.path
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </motion.nav>
   );
